@@ -40,10 +40,9 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        //Create a for list to iterate through the numbers in the list. Save the number as a variable.
-        //Create the new index using i + the amount. Than use modulo to circle back to 0 if the it 
-        //goes above the length of the list. Remove the value at the new index and insert the number
-        //saved in the variable.
+        //Splice the list to get all the numbers except the new value wanted at data[0] and save
+        //as variable. Use RemoveRange to remove the spliced list from data. Add the spliced list
+        //back to the original list.
 
         var spliced = data.GetRange(0, data.Count - amount);
         data.RemoveRange(0, data.Count - amount);

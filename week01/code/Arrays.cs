@@ -13,7 +13,17 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // Step 1: Create a List to contain the multiples. Step 2: Create a for loop that multiples
+        // the number with i and iterate through up to the length of the list. Step 3: In the for loop, 
+        //add the multiple to the multiples list. Step 4: Return the list as an array of doubles
+        var multiplesList = new List<double>();
+        for (int i = 1; i < length + 1; i++)
+        {
+            var multiple = number * i;
+            multiplesList.Add(multiple);
+        }
+
+        return multiplesList.ToArray(); // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +39,14 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        //Create a for list to iterate through the numbers in the list. Save the number as a variable.
+        //Create the new index using i + the amount. Than use modulo to circle back to 0 if the it 
+        //goes above the length of the list. Remove the value at the new index and insert the number
+        //saved in the variable.
+
+        var spliced = data.GetRange(0, data.Count - amount);
+        data.RemoveRange(0, data.Count - amount);
+        data.AddRange(spliced);
     }
 }
